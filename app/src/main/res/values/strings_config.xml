@@ -7,10 +7,10 @@
     <!-- For formal released project, please use Security Keys/Token
         https://docs.agora.io/en/Video/token?platform=All%20Platforms -->
     <!--App Certificate: a5226d7a5ee04384aa579038d899288a-->
-    <string name="agora_app_id">de7cee825722424e8843a203806fe58d</string>
+    <string name="agora_app_id">YOUR AGORA APP ID</string>
     <!-- Please leave it if not enable App Certificate -->
     <!-- You can generate a temporary token at https://dashboard.agora.io/projects -->
-    <string name="agora_access_token">006de7cee825722424e8843a203806fe58dIAALuZ6AQE38GO8cVRTtUTxb+Ste9aIXEFADhGOrcXePAQx+f9gAAAAAEAB7YFAvKNPLXgEAAQAo08te</string>
+    <string name="agora_access_token">AGORA ACCESS TOKEN</string>
 <!-- channel name: testingChannel -->
     <string-array name="encryption_mode_values">
         <item>AES-128-XTS</item>
