@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".referStudents">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_shape"
+            android:fontFamily="serif"
+            android:padding="8dp"
+            android:text="Q.)"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/edit_text_shape"
+            android:cursorVisible="true"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="serif"
+            android:gravity="top|start"
+            android:hint="Enter Your Ans Here.."
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:scrollbars="vertical"
+            android:textColor="#000000"
+            android:textCursorDrawable="@null"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/question"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edit_text_shape"
+            android:fontFamily="serif"
+            android:text="Submit"
+            android:textSize="20sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true"
+            android:visibility="gone"
+            tools:context=".ui.CallActivity">
+
+            <io.agora.openvcall.ui.layout.GridVideoViewContainer
+                android:id="@+id/grid_video_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ViewStub
+                android:id="@id/small_video_view_dock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:inflatedId="@id/small_video_view_dock"
+                android:layout="@layout/small_video_view_dock" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <io.agora.propeller.ui.AGLinearLayout
+                    android:id="@+id/extra_ops_container"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:onClick="onSwitchCameraClicked"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/btn_switch_camera_white" />
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:onClick="onMixingAudioClicked"
+                        android:scaleType="center"
+                        app:srcCompat="@drawable/btn_audio_mixing_off" />
+
+                </io.agora.propeller.ui.AGLinearLayout>
+
+                <io.agora.propeller.ui.AGLinearLayout
+                    android:id="@+id/bottom_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/bottom_action_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@android:color/white"
+                        android:orientation="horizontal"
+                        android:paddingStart="8dp"
+                        android:paddingLeft="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingRight="8dp">
+
+                        <ImageView
+                            android:id="@id/switch_speaker_id"
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onSwitchSpeakerClicked"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_speaker" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onFilterClicked"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_filter" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onHangupClicked"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_hangup" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onVideoMuteClicked"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_camera" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onVoiceMuteClicked"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_microphone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/msg_input_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="54dp"
+                        android:background="@color/dark_black"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="54dp"
+                            android:layout_height="match_parent"
+                            android:onClick="onClickHideIME"
+                            android:scaleType="center"
+                            app:srcCompat="@drawable/btn_keyboard_hide" />
+
+                        <EditText
+                            android:id="@+id/msg_content"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="20"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/msg_say_something"
+                            android:imeActionLabel="@string/label_send"
+                            android:imeOptions="actionSend"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@android:color/white"
+                            android:textColorHint="@android:color/white" />
+
+                    </LinearLayout>
+
+                </io.agora.propeller.ui.AGLinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/msg_list"
+                    android:layout_width="272dp"
+                    android:layout_height="144dp"
+                    android:layout_above="@id/bottom_container" />
+
+            </RelativeLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

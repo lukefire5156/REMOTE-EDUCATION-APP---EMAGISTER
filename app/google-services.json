@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336073547876",
+    "firebase_url": "https://remotecollegeibm.firebaseio.com",
+    "project_id": "remotecollegeibm",
+    "storage_bucket": "remotecollegeibm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336073547876:android:48844fe6518557b8a7bf71",
+        "android_client_info": {
+          "package_name": "io.agora.openvcall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336073547876-k5ji9fvg4oqes59fpm3lh5gltbe63bn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.agora.openvcall",
+            "certificate_hash": "7ba80374ca3899727cd8b2c19daf1238a6809434"
+          }
+        },
+        {
+          "client_id": "336073547876-1e7mc0uctgkhgg4h6an6gg6cs41sbmi1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHkoaqk1BzMoJ06FoFTwswVop5cVMTaQU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336073547876-1e7mc0uctgkhgg4h6an6gg6cs41sbmi1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
