@@ -977,9 +977,9 @@ public class CallActivity extends BaseActivity implements DuringCallEventHandler
     private void recordMessage() {
         speechService = new SpeechToText();
         //Use "apikey" as username and apikey as your password
-        speechService.setUsernameAndPassword("apikey", "VntKAUvyBFcEXVfNj4Y74WYyrrE0F63gXyNzIpbLgklh");
+        speechService.setUsernameAndPassword("apikey", "PASTE YOUR API KEY");
         //Default: https://stream.watsonplatform.net/text-to-speech/api
-        speechService.setEndPoint("https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/848e1e62-d0f9-4d22-b3a0-b9283607db78");
+        speechService.setEndPoint("URL");
 
         if(listening != true) {
             capture = microphoneHelper.getInputStream(true);
